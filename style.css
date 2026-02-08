@@ -1,0 +1,388 @@
+/* ========== THEME VARIABLES ========== */
+:root {
+  --bg: #0b0f14;
+  --panel: rgba(255, 255, 255, 0.06);
+  --text: #eaf0ff;
+  --muted: rgba(234, 240, 255, 0.7);
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #7c5cff;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+/* Light Theme */
+body.light {
+  --bg: #f5f7ff;
+  --panel: rgba(0, 0, 0, 0.05);
+  --text: #0a0f16;
+  --muted: rgba(10, 15, 22, 0.7);
+  --border: rgba(0, 0, 0, 0.12);
+  --accent: #4b3bff;
+  --shadow: rgba(0, 0, 0, 0.15);
+}
+
+/* ========== BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Minecraft", Arial, sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  margin: 14px;
+  border-radius: 18px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 30px var(--shadow);
+}
+
+.logo {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+.theme-btn {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.05);
+  border-color: var(--accent);
+}
+
+/* ========== SECTIONS ========== */
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 35px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 45px var(--shadow);
+}
+
+h1 {
+  font-size: 44px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.small-text {
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+/* ========== HERO ========== */
+.hero {
+  min-height: 90vh;
+}
+
+.hero-card {
+  width: 100%;
+  max-width: 850px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  padding: 55px 40px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 50px var(--shadow);
+}
+
+.tagline {
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  transition: 0.25s ease;
+  font-size: 14px;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+.btn.primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn.ghost {
+  color: var(--text);
+}
+
+.btn.ghost:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* ========== INFO GRID ========== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.info-box {
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  transition: 0.25s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.info-box h3 {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* ========== MINECRAFT CARD ========== */
+.mc-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.mc-left, .mc-right {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.tier {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  margin-top: 10px;
+}
+
+.rank {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.rank.s { background: #2ee59d; color: #06140e; }
+.rank.a { background: #5caeff; color: #06111a; }
+.rank.b { background: #ffd65c; color: #1a1406; }
+.rank.c { background: #ff6a6a; color: #1a0606; }
+
+/* ========== SOCIALS ========== */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.social-btn {
+  text-align: center;
+  padding: 14px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  transition: 0.25s ease;
+  color: var(--text);
+}
+
+/* platform vibes */
+.social-btn.yt:hover { border-color: #ff3d3d; transform: translateY(-4px); }
+.social-btn.dc:hover { border-color: #5865f2; transform: translateY(-4px); }
+.social-btn.ig:hover { border-color: #ff5cc8; transform: translateY(-4px); }
+.social-btn.gh:hover { border-color: #ffffff; transform: translateY(-4px); }
+
+/* ========== FOOTER ========== */
+.footer {
+  text-align: center;
+  padding: 25px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* ========== ANIMATIONS ========== */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 850px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mc-card {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+}
+/* ======== BACKGROUND GRID ======== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* ======== PARTICLES AREA ======== */
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -3;
+  pointer-events: none;
+}
+/* Light theme background upgrade */
+body.light::before {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Soft gradient glow for light mode */
+body.light::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(124, 92, 255, 0.25), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(92, 174, 255, 0.22), transparent 55%);
+  z-index: -4;
+  pointer-events: none;
+}
+
+}
+body.light .container,
+body.light .hero-card,
+body.light .navbar {
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+.skin-viewer {
+  width: 240px;
+  height: 320px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.25);
+  display: block;
+}
+
+
+

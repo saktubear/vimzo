@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saktu | A Minecraft Player</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Minecraft-ish font -->
+  <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+<script src="https://unpkg.com/skinview3d@2.0.0/bundle/skinview3d.bundle.js"></script>
+
+
+</head>
+
+<body>
+
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <div class="logo">⚡ Saktu</div>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#minecraft">Minecraft</a>
+      <a href="#socials">Socials</a>
+    </nav>
+
+    <button id="themeToggle" class="theme-btn">🌙</button>
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <!-- HERO -->
+    <section id="home" class="section hero">
+      <div class="hero-card fade-in">
+        <h1>Saktu</h1>
+        <p class="tagline">
+          Minecraft PvP • 16 Yearls Old • Chill
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn primary" href="#socials">Social Links</a>
+          <a class="btn ghost" href="#minecraft">Minecraft Info</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container fade-up">
+        <h2>About Me</h2>
+        <p>
+          Yo 👋 I’m Saktu. I love to play Minecraft,especially PvP. This site is my personal corner of the internet.
+        </p>
+
+        <div class="info-grid">
+          <div class="info-box">
+            <h3>🎮 Main Game</h3>
+            <p>Minecraft</p>
+          </div>
+
+          <div class="info-box">
+            <h3>💻 Ingame-Name</h3>
+            <p>Vimzo</p>
+          </div>
+
+          <div class="info-box">
+            <h3>⚔️ Focus</h3>
+            <p>Sword PvP + SMP PvP</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MINECRAFT -->
+    <section id="minecraft" class="section">
+      <div class="container fade-up">
+        <h2>Minecraft Info</h2>
+
+        <div class="mc-card">
+          <div class="mc-left">
+<canvas id="skin-viewer" class="skin-viewer"></canvas>
+<p class="small-text">Drag to rotate • Scroll to zoom</p>
+
+
+          </div>
+
+          <div class="mc-right">
+            <h3>🏆 PvP Tiers</h3>
+
+            <div class="tier">
+              <span>Diamond SMP </span>
+              <b class="rank s">HT5</b>
+            </div>
+
+            <div class="tier">
+              <span>SMP PvP</span>
+              <b class="rank a">N/A</b>
+            </div>
+
+            <div class="tier">
+              <span>Sword PvP</span>
+              <b class="rank b">N/A</b>
+            </div>
+
+            <div class="tier">
+              <span>Bow PvP</span>
+              <b class="rank c">HT5</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIALS -->
+    <section id="socials" class="section">
+      <div class="container fade-up">
+        <h2>Social Links</h2>
+
+
+        <div class="social-grid">
+          <a class="social-btn yt" href="https://www.youtube.com/@saktu_bear" target="_blank">YouTube</a>
+          <a class="social-btn dc" href="https://discord.gg/dEbR7TyMSj" target="_blank">Discord</a>
+          <a class="social-btn ig" href="https://www.instagram.com/_saktu_/" target="_blank">Instagram</a>
+          <a class="social-btn gh" href="https://namemc.com/profile/Vimzo.2" target="_blank">NameMC</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Saktu | A Minecraft Player • 2026</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+<!-- Background Particles -->
+<div id="tsparticles"></div>
+
+<!-- tsParticles library -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+</body>
+</html>
+
