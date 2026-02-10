@@ -224,7 +224,7 @@ p {
   margin-top: 18px;
 }
 
-.mc-left, .mc-right {
+.skin, .tier-list {
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 18px;
