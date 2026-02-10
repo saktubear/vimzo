@@ -383,6 +383,40 @@ body.light .navbar {
   background: rgba(0, 0, 0, 0.25);
   display: block;
 }
+/* ===== MOBILE TEXT FIX ===== */
+@media (max-width: 600px) {
+
+  body {
+    font-family: Arial, sans-serif; /* fallback for mobile */
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero-card {
+    padding: 35px 20px;
+  }
+
+  .container {
+    padding: 24px 18px;
+  }
+
+  .tagline {
+    font-size: 13px;
+  }
+}
+
 
 
 
