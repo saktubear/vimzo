@@ -50,8 +50,8 @@ window.addEventListener("load", () => {
   });
 
   // Load skin + cape from your repo
-  viewer.loadSkin("assets/skin.png");
-  viewer.loadCape("assets/cape.png");
+  viewer.loadSkin("skin.png");
+  viewer.loadCape("cape.png");
 
   // Disable controls (no rotate / no zoom)
   viewer.controls.enableRotate = false;
