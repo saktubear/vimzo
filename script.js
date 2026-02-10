@@ -38,10 +38,18 @@ const observer = new IntersectionObserver(
 
 faders.forEach((el) => observer.observe(el));
 
-// ===== Minecraft Skin Viewer (Walking Animation) =====
 window.addEventListener("load", () => {
   const canvas = document.getElementById("skin-viewer");
-  if (!canvas) return;
+
+  if (!canvas) {
+    console.log("❌ skin-viewer canvas not found");
+    return;
+  }
+
+  if (typeof skinview3d === "undefined") {
+    console.log("❌ skinview3d not loaded");
+    return;
+  }
 
   const viewer = new skinview3d.SkinViewer({
     canvas: canvas,
@@ -49,22 +57,17 @@ window.addEventListener("load", () => {
     height: 320
   });
 
-  // Load skin + cape from your repo
   viewer.loadSkin("skin.png");
+
+  // Cape is optional
   viewer.loadCape("cape.png");
 
-  // Disable controls (no rotate / no zoom)
   viewer.controls.enableRotate = false;
   viewer.controls.enableZoom = false;
   viewer.controls.enablePan = false;
 
-  // Set camera position (nice centered view)
   viewer.camera.position.set(0, 20, 55);
 
-  // Add walking animation
   const walk = viewer.animations.add(skinview3d.WalkingAnimation);
-  walk.speed = 1; // you can set 0.5 slower, 2 faster
+  walk.speed = 1;
 });
-
-
-
