@@ -59,8 +59,7 @@ window.addEventListener("load", () => {
 
   viewer.loadSkin("skin.png");
 
-  // Cape is optional
-  viewer.loadCape("cape.png");
+  
 
   viewer.controls.enableRotate = false;
   viewer.controls.enableZoom = false;
