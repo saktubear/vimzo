@@ -38,35 +38,3 @@ const observer = new IntersectionObserver(
 
 faders.forEach((el) => observer.observe(el));
 
-window.addEventListener("load", () => {
-  const canvas = document.getElementById("skin-viewer");
-
-  if (!canvas) {
-    console.log("❌ skin-viewer canvas not found");
-    return;
-  }
-
-  if (typeof skinview3d === "undefined") {
-    console.log("❌ skinview3d not loaded");
-    return;
-  }
-
-  const viewer = new skinview3d.SkinViewer({
-    canvas: canvas,
-    width: 240,
-    height: 320
-  });
-
-  viewer.loadSkin("skin.png");
-
-  
-
-  viewer.controls.enableRotate = false;
-  viewer.controls.enableZoom = false;
-  viewer.controls.enablePan = false;
-
-  viewer.camera.position.set(0, 20, 55);
-
-  const walk = viewer.animations.add(skinview3d.WalkingAnimation);
-  walk.speed = 1;
-});
