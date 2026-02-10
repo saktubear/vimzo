@@ -37,7 +37,8 @@ const observer = new IntersectionObserver(
 );
 
 faders.forEach((el) => observer.observe(el));
-// ===== Minecraft Skin Viewer =====
+
+// ===== Minecraft Skin Viewer (Walking Animation) =====
 window.addEventListener("load", () => {
   const canvas = document.getElementById("skin-viewer");
   if (!canvas) return;
@@ -52,13 +53,18 @@ window.addEventListener("load", () => {
   viewer.loadSkin("assets/skin.png");
   viewer.loadCape("assets/cape.png");
 
-  // Controls like Skindex
-  viewer.controls.enableRotate = true;
-  viewer.controls.enableZoom = true;
+  // Disable controls (no rotate / no zoom)
+  viewer.controls.enableRotate = false;
+  viewer.controls.enableZoom = false;
   viewer.controls.enablePan = false;
 
-  // Smooth idle rotation
-  viewer.animations.add(skinview3d.RotationAnimation);
+  // Set camera position (nice centered view)
+  viewer.camera.position.set(0, 20, 55);
+
+  // Add walking animation
+  const walk = viewer.animations.add(skinview3d.WalkingAnimation);
+  walk.speed = 1; // you can set 0.5 slower, 2 faster
 });
+
 
 
